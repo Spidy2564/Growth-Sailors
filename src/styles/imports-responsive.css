@@ -1,0 +1,475 @@
+/* Comprehensive Responsive Styles for Import Components */
+
+/* ============================================
+   MOBILE FIRST - Base Mobile Styles (≤768px)
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Reset all absolute positioning to relative on mobile - but preserve some specific cases */
+  [class*="absolute"]:not([data-name*="faq-answer"]):not(.faq-answer) {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+  }
+  
+  /* Only reset transform on absolutely positioned elements */
+  [class*="absolute"][class*="translate"],
+  [class*="absolute"][style*="transform"] {
+    transform: none !important;
+  }
+  
+  /* Make all fixed widths responsive - but preserve some utilities */
+  [class*="w-\["]:not([class*="max-w"]):not([class*="min-w"]) {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Preserve max-width utilities */
+  [class*="max-w-"] {
+    max-width: 100% !important;
+  }
+  
+  /* Make all fixed heights auto on mobile */
+  [class*="h-\["],
+  [class*="h-"]:not([class*="min-h"]):not([class*="max-h"]) {
+    height: auto !important;
+    min-height: auto !important;
+  }
+  
+  /* Responsive sizing utilities */
+  [class*="size-\["],
+  [class*="size-"] {
+    width: auto !important;
+    height: auto !important;
+  }
+  
+  /* Make all containers full width */
+  [data-name="Home"],
+  [data-name="What"],
+  [data-name="Why"],
+  [data-name="Who"],
+  [data-name="Pricing"] {
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-width: 100% !important;
+  }
+  
+  /* Stack flex containers vertically - but be smart about it */
+  .flex:not(.flex-col):not(.flex-row):not([class*="items-center"]):not([class*="justify-"]) {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  
+  /* Preserve centered items but stack */
+  .flex[class*="items-center"] {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  
+  /* Responsive spacing */
+  [class*="gap-\["],
+  [class*="gap-"] {
+    gap: 1rem !important;
+  }
+  
+  [class*="p-\["],
+  [class*="px-\["],
+  [class*="py-\["],
+  [class*="pt-\["],
+  [class*="pb-\["],
+  [class*="pl-\["],
+  [class*="pr-\["] {
+    padding: 1rem !important;
+  }
+  
+  [class*="m-\["],
+  [class*="mx-\["],
+  [class*="my-\["],
+  [class*="mt-\["],
+  [class*="mb-\["],
+  [class*="ml-\["],
+  [class*="mr-\["] {
+    margin: 0.5rem 0 !important;
+  }
+  
+  /* Responsive typography */
+  p, span, div, a {
+    font-size: clamp(14px, 4vw, 18px) !important;
+    line-height: 1.5 !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-size: clamp(1.25rem, 5vw, 2rem) !important;
+    line-height: 1.4 !important;
+  }
+  
+  /* Responsive images */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    width: auto !important;
+  }
+  
+  [class*="object-cover"],
+  [class*="object-contain"] {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+  
+  /* Navigation responsive */
+  [data-name*="NavBar"],
+  [data-name*="nav"],
+  nav {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 1rem !important;
+    width: 100% !important;
+    position: relative !important;
+  }
+  
+  [data-name*="Link"],
+  [data-name*="menu-item"],
+  nav a {
+    display: block !important;
+    width: 100% !important;
+    padding: 0.75rem 0 !important;
+    margin: 0.25rem 0 !important;
+    text-align: left !important;
+  }
+  
+  /* Logo responsive */
+  [data-name*="logo"],
+  [data-name="logo white big 1"] {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    margin: 1rem 0 !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  
+  [data-name*="logo"] img,
+  [data-name="logo white big 1"] img {
+    max-width: 120px !important;
+    height: auto !important;
+    width: auto !important;
+  }
+  
+  /* Buttons responsive */
+  button,
+  [data-name*="button"],
+  [data-name*="Button"],
+  [role="button"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 14px !important;
+    margin: 0.5rem 0 !important;
+    text-align: center !important;
+  }
+  
+  /* Sections and Frames responsive */
+  [data-name*="Section"],
+  [data-name*="Frame"],
+  section {
+    width: 100% !important;
+    padding: 1rem !important;
+    margin: 1rem 0 !important;
+    position: relative !important;
+  }
+  
+  /* Cards responsive */
+  [data-name*="Card"],
+  [data-name*="card"],
+  .card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 1rem 0 !important;
+    padding: 1rem !important;
+  }
+  
+  /* Grid responsive */
+  [class*="grid"],
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  /* Carousel responsive */
+  [class*="carousel"],
+  [data-name*="carousel"] {
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  
+  [class*="carousel"] > * {
+    scroll-snap-align: start;
+    min-width: 80%;
+  }
+  
+  /* Tables responsive */
+  table {
+    display: block !important;
+    overflow-x: auto !important;
+    width: 100% !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Lists responsive */
+  ul, ol {
+    padding-left: 1.5rem !important;
+    margin: 1rem 0 !important;
+  }
+  
+  /* Text alignment responsive */
+  [class*="text-center"],
+  [class*="text-right"] {
+    text-align: left !important;
+  }
+  
+  /* Transform reset */
+  [style*="transform:"],
+  [class*="translate"],
+  [class*="rotate"],
+  [class*="scale"] {
+    transform: none !important;
+  }
+  
+  /* Z-index reset */
+  [style*="z-index:"],
+  [class*="z-"] {
+    z-index: auto !important;
+  }
+  
+  /* Overflow handling */
+  [class*="overflow"] {
+    overflow: visible !important;
+  }
+  
+  /* Specific component fixes */
+  [data-name*="FAQ"],
+  [data-name*="faq"] {
+    width: 100% !important;
+    padding: 1rem !important;
+  }
+  
+  [data-name*="Footer"],
+  [data-name*="footer"] {
+    position: relative !important;
+    top: auto !important;
+    margin-top: 2rem !important;
+    padding: 1rem !important;
+  }
+  
+  /* Hero sections */
+  [data-name*="Hero"],
+  [data-name*="hero"] {
+    padding: 2rem 1rem !important;
+    text-align: center !important;
+  }
+  
+  /* Pricing cards */
+  [data-name*="Pricing"],
+  [data-name*="pricing"],
+  [data-name*="Plan"] {
+    width: 100% !important;
+    margin: 1rem 0 !important;
+    padding: 1rem !important;
+  }
+}
+
+/* ============================================
+   TABLET STYLES (769px - 1024px)
+   ============================================ */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Slightly more relaxed but still responsive */
+  [class*="w-\["] {
+    max-width: 100% !important;
+  }
+  
+  [class*="absolute"] {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+  }
+  
+  /* Allow some absolute positioning but with constraints */
+  [data-name*="logo"] {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+  }
+  
+  /* Two column layouts */
+  .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  /* Responsive text */
+  p, span {
+    font-size: clamp(15px, 2vw, 18px) !important;
+  }
+}
+
+/* ============================================
+   LARGE MOBILE / SMALL TABLET (481px - 768px)
+   ============================================ */
+
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Slightly larger padding */
+  [data-name*="Section"],
+  [data-name*="Frame"] {
+    padding: 1.5rem !important;
+  }
+  
+  /* Two column for some elements */
+  .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* ============================================
+   SMALL MOBILE (≤480px)
+   ============================================ */
+
+@media (max-width: 480px) {
+  /* Even tighter spacing */
+  [data-name*="Section"],
+  [data-name*="Frame"] {
+    padding: 0.75rem !important;
+  }
+  
+  p, span {
+    font-size: clamp(12px, 4vw, 16px) !important;
+  }
+  
+  h1, h2, h3 {
+    font-size: clamp(1rem, 6vw, 1.5rem) !important;
+  }
+  
+  button {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 12px !important;
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Prevent horizontal scroll globally */
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+body, html {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+
+/* Responsive container for all imports */
+.responsive-content-wrapper > * {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Smooth transitions */
+@media (max-width: 768px) {
+  * {
+    transition: width 0.3s ease, height 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Touch-friendly on mobile */
+  a, button, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Specific fixes for common component patterns */
+  
+  /* Left/Right positioning classes */
+  [class*="left-\["],
+  [class*="right-\["],
+  [class*="top-\["],
+  [class*="bottom-\["] {
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+  }
+  
+  /* Shrink utilities */
+  [class*="shrink-0"],
+  [class*="shrink"] {
+    flex-shrink: 1 !important;
+    width: 100% !important;
+  }
+  
+  /* Inset utilities */
+  [class*="inset-"] {
+    position: relative !important;
+    inset: auto !important;
+  }
+  
+  /* Specific width patterns */
+  [class*="w-\[1440px\]"],
+  [class*="w-\[1024px\]"],
+  [class*="w-\[768px\]"] {
+    width: 100% !important;
+  }
+  
+  /* Text utilities that need adjustment */
+  [class*="text-nowrap"] {
+    white-space: normal !important;
+  }
+  
+  /* Leading/line-height adjustments */
+  [class*="leading-\["] {
+    line-height: 1.5 !important;
+  }
+  
+  /* Font size adjustments */
+  [class*="text-\["] {
+    font-size: clamp(12px, 4vw, 18px) !important;
+  }
+  
+  /* Specific component wrappers */
+  [data-name*="Wrapper"],
+  [data-name*="Container"],
+  [data-name*="Section"] {
+    width: 100% !important;
+    padding: 1rem !important;
+  }
+  
+  /* Frame components */
+  [data-name*="Frame"] {
+    width: 100% !important;
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    margin: 1rem 0 !important;
+  }
+  
+  /* Item components */
+  [data-name*="Item"] {
+    width: 100% !important;
+    margin: 0.5rem 0 !important;
+  }
+  
+  /* Div components with fixed sizes */
+  [data-name="Div"],
+  [data-name*="div"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+

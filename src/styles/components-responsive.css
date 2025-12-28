@@ -1,0 +1,222 @@
+/* Individual Component Responsive Styles */
+
+/* ============================================
+   HOME COMPONENT
+   ============================================ */
+.responsive-home {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .responsive-home .home-logo {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    margin: 1rem 0 !important;
+  }
+  
+  .responsive-home .home-navbar {
+    position: relative !important;
+    width: 100% !important;
+  }
+  
+  .responsive-home .home-content > * {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 1rem 0 !important;
+  }
+}
+
+/* ============================================
+   WHAT COMPONENT
+   ============================================ */
+.responsive-what {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .responsive-what .what-logo {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    margin: 1rem 0 !important;
+  }
+  
+  .responsive-what .what-navbar {
+    position: relative !important;
+    width: 100% !important;
+  }
+  
+  .responsive-what .what-title {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+  
+  .responsive-what .what-subtitle {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+  }
+  
+  .responsive-what .what-content > * {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 1rem 0 !important;
+  }
+}
+
+/* ============================================
+   WHY COMPONENT
+   ============================================ */
+.responsive-why {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .responsive-why .why-logo {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    margin: 1rem 0 !important;
+  }
+  
+  .responsive-why .why-navbar {
+    position: relative !important;
+    width: 100% !important;
+  }
+  
+  .responsive-why .why-title {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+  }
+  
+  .responsive-why .why-featured {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    white-space: normal !important;
+  }
+  
+  .responsive-why .why-content > * {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 1rem 0 !important;
+  }
+}
+
+/* ============================================
+   WHO COMPONENT
+   ============================================ */
+.responsive-who {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .responsive-who .who-logo {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    margin: 1rem 0 !important;
+  }
+  
+  .responsive-who .who-navbar {
+    position: relative !important;
+    width: 100% !important;
+  }
+  
+  .responsive-who .who-content > * {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 1rem 0 !important;
+  }
+}
+
+/* ============================================
+   PRICING COMPONENT
+   ============================================ */
+.responsive-pricing {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .responsive-pricing .pricing-logo {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    margin: 1rem 0 !important;
+  }
+  
+  .responsive-pricing .pricing-navbar {
+    position: relative !important;
+    width: 100% !important;
+  }
+  
+  .responsive-pricing .pricing-content > * {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 1rem 0 !important;
+  }
+}
+
+/* ============================================
+   COMMON RESPONSIVE UTILITIES
+   ============================================ */
+@media (max-width: 768px) {
+  /* All components - make images responsive */
+  .responsive-home img,
+  .responsive-what img,
+  .responsive-why img,
+  .responsive-who img,
+  .responsive-pricing img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* All components - responsive text */
+  .responsive-home p,
+  .responsive-what p,
+  .responsive-why p,
+  .responsive-who p,
+  .responsive-pricing p {
+    font-size: clamp(14px, 4vw, 18px) !important;
+    line-height: 1.5 !important;
+  }
+  
+  /* All components - responsive buttons */
+  .responsive-home button,
+  .responsive-what button,
+  .responsive-why button,
+  .responsive-who button,
+  .responsive-pricing button {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0.75rem 1rem !important;
+  }
+}
+
